@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>SILENCE – Visual Archive</title>
+
+<style>
+
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+/* ---------- STAGE ---------- */
+.stage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ---------- BACKGROUND ---------- */
+.bg {
+  position: absolute;
+  inset: 0;
+  background: url("background.png") no-repeat top center;
+  background-size: cover;
+  z-index: 0;
+}
+
+/* ---------- HOTSPOTS ---------- */
+.hotspot {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* PNG SHAPE OUTLINE */
+.hotspot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.hotspot:hover {
+  transform: scale(1.03);
+}
+
+.hotspot:hover img {
+  filter:
+    drop-shadow(0 0 1px rgba(0,0,0,0.9))
+    drop-shadow(0 0 1px rgba(0,0,0,0.9));
+}
+
+/* ---------- POSITIONS ---------- */
+
+/* BODY MAN */
+#body-man {
+  top: 20%;
+  left: 25%;
+  width: 50vw;
+  z-index: 3;
+}
+
+/* HORSE — ABOVE HOUSE */
+#horse {
+  top: 48%;
+  left: 35%;
+  width: 25vw;
+  z-index: 5;
+}
+
+/* WOMAN 1 */
+#woman-1 {
+  top: 4%;
+  right: 15%;
+  width: 15vw;
+  z-index: 5;
+}
+
+/* WOMAN 2 (small lady) */
+#lady-2 {
+  top: 28%;
+  right: 8%;
+  width: 7vw;
+  z-index: 2;
+}
+
+/* HOUSE — BELOW HORSE */
+#house {
+  bottom: 4%;
+  left: 80%;
+  width: 0%;
+  transform: translateX(-50%);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+#house:hover {
+  transform: translateX(-50%) scale(1.03);
+  opacity: 1;
+}
+
+/* ---------- LABEL ---------- */
+.label {
+  position: absolute;
+  bottom: -2.2em;
+  left: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #000;
+}
+
+.hotspot:hover .label {
+  opacity: 1;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stage">
+
+  <div class="bg"></div>
+
+  <!-- HORSE -->
+  <a href="https://drive.google.com/file/d/19KTxoox9JOHod7wNGZT3nw1ia7r8pwF1/view?usp=share_link" class="hotspot" id="horse" target="_blank">
+    <img src="actualhorse.png" alt="">
+    <div class="label">PROJECT 1: RESET SHOW</div>
+  </a>
+
+  <!-- BODY MAN -->
+  <a href="https://drive.google.com/file/d/your-body-man-link/view?usp=share_link" class="hotspot" id="body-man" target="_blank">
+    <img src="finhouse.png" alt="">
+    <div class="label">RESIDUAL EVIDENCE</div>
+  </a>
+
+  <!-- WOMAN 1 -->
+  <a href="https://drive.google.com/file/d/14R9ErFjKYUng3SVeIi9dDspF2IkAOFzT/view?usp=share_link" class="hotspot" id="woman-1" target="_blank">
+    <img src="biglady.png" alt="">
+    <div class="label">PROJECT 2: EXPERIMENTAL TECHNIQUES</div>
+  </a>
+
+  <!-- WOMAN 2 (small lady) - not clickable -->
+  <div class="hotspot" id="lady-2">
+    <img src="littlelady.png" alt="">
+    <div class="label">PROJECT 3: COMING SOON</div>
+  </div>
+
+  <!-- HOUSE -->
+ <!-- HOUSE -->
+<a href="https://www.dropbox.com/scl/fi/i3fgkvahj6lktntftgrwj/Green-Minimalist-Resume-2.pdf?rlkey=ns1hugpser7jgjzlu53brj2m9&st=ydqo0nsg&dl=0" class="hotspot" id="house" target="_blank">
+  <img src="house.png" alt="">
+  <div class="label">RESIDUAL EVIDENCE</div>
+</a>
+
+</div>
+
+</body>
+</html>
